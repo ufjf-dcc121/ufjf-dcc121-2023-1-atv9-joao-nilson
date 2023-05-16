@@ -30,8 +30,8 @@
     <script>
         const form = document.querySelector("form");
         form.addEventListener("submit", aoEnviar);
-        const spanNome = document.querySelector("span");
-        //const pNome = document.querySelector("p");
+        //const spanNome = document.querySelector("span");
+        const pNome = document.querySelector("p");
 
         function aoEnviar(evento){
             evento.preventDefault();
@@ -41,9 +41,10 @@
             const idade = form.idade.valueAsNumber;
             const nomeCompleto = `${nome} ${sobrenome}, ${idade} anos`;
             console.log(nomeCompleto);
-            spanNome.textContent = `Olá <span>${nomeCompleto}</span>!`;
-            //pNome.innerHTML = `Olá <span>${nomeCompleto}</span>!`;
+            //spanNome.textContent = `Olá <span>${nomeCompleto}</span>!`;
+            pNome.innerHTML = `Olá <span>${nomeCompleto}</span>!`;
 
+            form.reset();
         }
     </script>
 </body>
